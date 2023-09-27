@@ -6,8 +6,9 @@ WITH source AS (
     SELECT
         EVENT_ID,
         SESSION_ID,
-        USER_ID AS user_guid,
-        CREATED_AT AS created_at_utc
+        USER_ID,
+        CREATED_AT AS created_at_utc,
+        EVENT_TYPE
     FROM source
 )
 

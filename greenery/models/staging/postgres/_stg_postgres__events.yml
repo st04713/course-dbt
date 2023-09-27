@@ -1,0 +1,13 @@
+# building table
+# /workspace/course-dbt/greenery (main) $ dbt build -m stg_postgres__events
+
+version: 2
+
+models:
+ - name: stg_postgres__events # same name as sql file
+   description: base table from greenery events 
+   columns:
+    - name: EVENT_ID 
+      tests:
+       - unique
+       - not_null

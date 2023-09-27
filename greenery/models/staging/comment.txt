@@ -1,0 +1,10 @@
+# we need source.yml (define our sources) and schema.yml (description of your data model, test it also)
+# source.yml ~ configure source (schema, name), add source tables (table that dbt has not touched yet), configure freshness test
+# schema.yml ~ add descriptions, configure tests
+# models: staging folder, first interacted with raw ~ light transforamtions + renaming, recasting  # end result == easy to work with! ~ every sources should end up as a staging model either 1:1 with a source or a combination of base models
+# model layers # organize project -> organize tables 
+
+# fact_tables : what is the granularity in the table you want to work ?
+# intermediate tables 
+
+# dbt run -s +int_session_events_agg --run upstream
