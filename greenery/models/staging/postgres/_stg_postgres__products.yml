@@ -1,0 +1,20 @@
+version: 2
+
+models:
+ - name: stg_postgres__products # same name as sql file
+   description: details about product name, price, its stock left
+   columns:
+    - name: product_id 
+      tests:
+       - unique
+       - not_null
+    - name: price
+      tests:
+       - dbt_utils.accepted_range:
+          min_value: 0
+          inclusive: false
+    - name: inventory
+      tests:
+       - dbt_utils.accepted_range:
+          min_value: 0
+          inclusive: false

@@ -26,4 +26,9 @@ PO asks you "How long are people spending on our site ?"
 # 2.Daily orders by product? 
 # 3.What’s getting a lot of traffic, but maybe not converting into purchases?
 
-# fct_daily_performance_by_product (metrics: #order, ##revenue, #page_view,  / freq: daily / slice&dice_level: product_id)
+# fact_daily_performance_by_product.sql (metrics: #order, ##revenue, #page_view,  / freq: daily / slice&dice_level: product_id)
+
+# _fact_daily_performance_by_product.yml ~ test your data model
+# 1.What assumptions are you making about each model?, Did you find any “bad” data as you added and ran tests on your models? 
+# 2.How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+# 3.Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.

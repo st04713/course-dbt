@@ -8,6 +8,7 @@ WITH source AS (
         user_Id AS user_guid,
         address_id AS order_address_id,
         created_at AS created_at_utc,
+        DATE(created_at) AS created_date_utc,
         order_cost,
         shipping_cost,
         order_total,

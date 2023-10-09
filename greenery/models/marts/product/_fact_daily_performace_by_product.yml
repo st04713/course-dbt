@@ -1,0 +1,18 @@
+# building table
+# /workspace/course-dbt/greenery (main) $ dbt build -m stg_postgres__events
+# https://docs.getdbt.com/faqs/Tests/uniqueness-two-columns
+
+
+version: 2
+
+models:
+ - name: fact_daily_performace_by_product # same name as sql file
+   description:  daily performace by product containing metrics from sales side & digital side
+   tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns:
+          - product_id
+          - created_date_utc
+
+# dbt build -m +marts.product
+# dbt build -m +fact_daily_performace_by_product

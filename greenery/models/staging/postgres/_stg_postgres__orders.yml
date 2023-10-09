@@ -1,10 +1,12 @@
+# ensuring order dates should be BEFORE arrival dates.
+
 version: 2
 
 models:
  - name: stg_postgres__orders
    description: all orders, all the time !
    columns:
-    - name: order_guid
+    - name: order_id
       description: unique identifier for an order
       tests:
        - not_null
