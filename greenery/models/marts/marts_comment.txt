@@ -1,0 +1,29 @@
+
+data model layers wireframe for helping Jake
+
+stg_events -> fct_events -> int_session_events_agg(containing summary statistics of events by user by session)
+stg_users -> dim_users
+
+int_session_events_agg + dim_users -> fct_user_sessions (summary stat of events + user relevant profile)
+
+PO asks you "How long are people spending on our site ?"
+
+# intro to marts: 
+# Within each marts folder, create intermediate models and dimension/fact models.
+# Core folder ~ core_dataset fact_orders, dim_products, dim_users
+# Marketing folder ~ user_order_facts containing "order info by user level"
+# Product folder ~ fact_page_views contains all page_view_events from greenery's event data 
+# Q: thinking about product mart. What questions might we anticipate about our products?
+
+
+# w2hw Part 1. Models, "no one is going to tell you which models to build"
+# What are good indicators of a user who will likely purchase again? 
+# What about indicators of users who are likely NOT to purchase again? 
+# If you had more data, what features would you want to look into to answer this question?
+
+#from product mart, we might we want to know how different products perform. 
+# 1.What are daily page views by product? 
+# 2.Daily orders by product? 
+# 3.What’s getting a lot of traffic, but maybe not converting into purchases?
+
+# fct_daily_performance_by_product (metrics: #order, ##revenue, #page_view,  / freq: daily / slice&dice_level: product_id)

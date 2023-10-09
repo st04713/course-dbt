@@ -1,0 +1,20 @@
+version: 2
+
+models:
+ - name: stg_postgres__orders
+   description: all orders, all the time !
+   columns:
+    - name: order_guid
+      description: unique identifier for an order
+      tests:
+       - not_null
+       - unique:
+          warn_if: ">10"
+          error_if: ">20"
+      meta:
+        field_type: marketing
+    - name: user_guid
+      description: user identifier related to who placed that order
+      meta:
+        field_type: marketing
+

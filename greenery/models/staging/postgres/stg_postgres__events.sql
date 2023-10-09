@@ -6,7 +6,8 @@ WITH source AS (
     SELECT
         EVENT_ID,
         SESSION_ID,
-        USER_ID,
+        USER_ID AS USER_GUID,
+        PRODUCT_ID,
         CREATED_AT AS created_at_utc,
         EVENT_TYPE
     FROM source

@@ -1,0 +1,25 @@
+# we need source.yml (define our sources) and schema.yml (description of your data model, test it also)
+# source.yml ~ configure source (schema, name), add source tables (table that dbt has not touched yet), configure freshness test
+# schema.yml ~ add descriptions, configure tests
+# models: staging folder, first interacted with raw ~ light transforamtions + renaming, recasting  # end result == easy to work with! ~ every sources should end up as a staging model either 1:1 with a source or a combination of base models
+# model layers # organize project -> organize tables -> mart folder for business units (mostly summary statistics tables): core, marketing, product
+# intermediate tables -> adhoc tasks 
+
+# fact_tables : what is the granularity in the table you want to work ? by session, by user ? 
+
+
+# dbt run -s +int_session_events_agg --run upstream
+
+#w2 HW question
+# product director ask: What's our repeat user rate ?
+# repeat rate = users who purchased 2 or more times / users who purchased 
+# --> mostly, BU want the answers and some data they can "slice & dice" to dig deep more to create their report for thier manager.
+
+# data modeling -> model layers wirefame + SQL to answer the question.
+
+# Intro to tests ~ it's actually just runiing SQL queries and checking if any rows are returned. If row are returned, the test fails.
+# https://docs.getdbt.com/docs/build/tests
+
+# Generate your DAG 
+-- dbt docs generate 
+-- dbt docs serve

@@ -1,0 +1,21 @@
+-- WITH temp AS (
+--      SELECT 
+--          DATE(created_at_utc), 
+--          HOUR(created_at_utc),
+--          COUNT(DISTINCT session_id) AS num_session_hourly
+--      FROM DEV_DB.DBT_ITTIGOONSAITHONNGHOTMAILCOM.STG_POSTGRES__EVENTS
+--      GROUP BY 1,2
+--  )
+
+-- SELECT FLOOR(AVG(num_session_hourly)) AS avg_sessions_hourly FROM temp
+
+
+-- select * From DEV_DB.DBT_ITTIGOONSAITHONNGHOTMAILCOM.STG_POSTGRES__EVENTS
+-- limit 10
+
+-- SELECT * FROM RAW.PUBLIC.EVENTS
+-- LIMIT 10
+
+
+select * From DEV_DB.DBT_ITTIGOONSAITHONNGHOTMAILCOM.INT_SESSION_EVENTS_AGG
+limit 10

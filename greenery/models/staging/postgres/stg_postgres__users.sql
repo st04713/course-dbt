@@ -5,14 +5,22 @@ WITH source AS (
 
 , renamed_recast AS (
     SELECT 
-        user_Id AS user_guid,
-        created_at AS created_at_utc,
-        updated_At AS updated_at_utc
+        user_Id AS user_guid
+        , created_at AS created_at_utc
+        , updated_At AS updated_at_utc
+        , email
+        , phone_number
+        , address_id
     FROM source
 )
 
 select * from renamed_recast
 
 -- dbt run -m stg_postgres__users
--- dbt test -m stg_postgres__users // from _stg_postgres__users.yml
--- select * from dev_db.dbt_ittigoonsaithonnghotmailcom.stg_postgres__users
+-- dbt test -m stg_postgres__users 
+
+--- Terminal --- 
+-- cd greenery
+-- dbt build -m stg_postgres__users # test from _stg_postgres__users.yml
+--- SQL --- 
+-- select * from dev_db.dbt_ittigoonsaithonnghotmailcom.stg_postgres__users limit 10 -- check data

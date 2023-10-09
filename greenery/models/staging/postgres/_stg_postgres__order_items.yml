@@ -1,0 +1,11 @@
+version: 2
+
+models:
+ - name: stg_postgres__order_items
+   description: listing all items and its quantity in a order
+   columns:
+    - name: quantity
+      tests:
+       - dbt_utils.accepted_range:
+          min_value: 0
+          inclusive: false
