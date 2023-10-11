@@ -8,6 +8,7 @@ WITH source AS (
         SESSION_ID,
         USER_ID AS USER_GUID,
         PRODUCT_ID,
+        ORDER_ID,
         CREATED_AT AS created_at_utc,
         DATE(CREATED_AT) AS created_date_utc,
         EVENT_TYPE

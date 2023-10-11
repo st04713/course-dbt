@@ -1,4 +1,4 @@
-
+-- one session can not have 2 users ) 
 {{
     config(
         materialized = 'view'

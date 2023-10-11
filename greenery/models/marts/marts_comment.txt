@@ -32,3 +32,10 @@ PO asks you "How long are people spending on our site ?"
 # 1.What assumptions are you making about each model?, Did you find any “bad” data as you added and ran tests on your models? 
 # 2.How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
 # 3.Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
+
+
+#W3hw 
+# part 1 : create new model to answer the first two questions ~ What is our overall conversion rate?, What is our conversion rate by product?
+# Conversion rate is defined as the # of unique sessions with a purchase event / total number of unique sessions. 
+# Conversion rate by product is defined as the # of unique sessions with a purchase event of that product / total number of unique sessions that viewed that product
+# A question to think about: Why might certain products be converting at higher/lower rates than others? We don't actually have data to properly dig into this, but we can make some hypotheses. 
